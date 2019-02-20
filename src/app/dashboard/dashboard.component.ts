@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { TemplateRef, ViewChild } from "@angular/core";
 import { Router } from "@angular/router";
 import { ServicesService } from "../services/charityServices.service";
 import { NgForm } from "@angular/forms";
@@ -12,9 +11,8 @@ import Swal from "sweetalert2";
   styleUrls: ["./dashboard.component.css"]
 })
 export class DashboardComponent implements OnInit {
-  // charityCount:Number;
 
-  // public charityValue = [];
+
   checked = true;
 
   public searchString: string;
@@ -64,14 +62,8 @@ export class DashboardComponent implements OnInit {
   charityTable() {
     this.router.navigate(["charitytabels"]);
   }
-  isCollapsed = false;
-  triggerTemplate = null;
-  @ViewChild("trigger") customTrigger: TemplateRef<void>;
-
-  /** custom trigger can be TemplateRef **/
-  changeTrigger(): void {
-    this.triggerTemplate = this.customTrigger;
-  }
+  
+ 
 
   // // Bar chart
   // public barChartOptions:any = {

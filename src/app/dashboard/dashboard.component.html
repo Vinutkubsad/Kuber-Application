@@ -1,7 +1,7 @@
 <!-- Dasboard desgin -->
 <div style="padding:24px; background: #fff; min-height: 600px;">
   <!-- Boxes section -->
-  <section class="boxes">
+  <!-- <section class="boxes">
     <div class="box">
       <i class="fas fa-chart-pie fa-4x"></i>
       <h3>Charity Analytics</h3>
@@ -20,7 +20,7 @@
       <p>Total charities</p>
       <h2> {{ charityCount }} </h2>
     </div>
-  </section> 
+  </section>  -->
 
   <!-- Chart details -->
   <!-- <section class="graph-info">
@@ -43,14 +43,9 @@
   <section class="wrap-table">
     <div class="charity-tab">
       <p>Charity details</p>
-      <nz-mention nzPlacement="top" [nzSuggestions]="suggestions" (nzOnSelect)="onSelect($event)">
-        <input nzMentionTrigger nz-input [(ngModel)]="searchString" charityName="searchString" placeholder="Search.."
-          style="margin:1%; width: 50%;" />
-      </nz-mention>
-      <nz-table #borderedTable nzBordered [nzData]="charitySet">
+      <nz-table #borderedTable nzBordered>
         <thead>
           <tr>
-            <th>Suggest Charity</th>
             <th>Charity Name</th>
             <th>Description</th>
             <th>Address</th>

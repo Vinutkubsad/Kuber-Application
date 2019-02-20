@@ -36,10 +36,10 @@ export class AddCharityComponent implements OnInit {
   ];
 
   constructor(
-    private charityServices: ServicesService,
+    public charityServices: ServicesService,
     private fb: FormBuilder,
     private msg: NzMessageService,
-    private router: Router
+    public router: Router
   ) {}
 
   ngOnInit(): void {
@@ -77,7 +77,7 @@ export class AddCharityComponent implements OnInit {
   //   });
   // }
 
-  submitForm(form: NgForm) {
+  submitForm() {
     if (this.validateForm.valid) {
       console.log("form Submited", this.validateForm.value);
       this.charityServices

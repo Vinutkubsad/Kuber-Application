@@ -85,7 +85,7 @@
       <nz-form-label [nzSm]="2" [nzXs]="24" nzFor="zipcode" nzRequired>Zip-Code</nz-form-label>
       <nz-form-control [nzSm]="3" [nzXs]="24">
         <input nz-input id="zipcode" formControlName="zipcode" placeholder=""
-          [(ngModel)]="charityServices.slectedCharity.zipCode" />
+          [(ngModel)]="charityServices.slectedCharity.zipcode" />
         <nz-form-explain *ngIf="
             validateForm.get('zipcode').dirty &&
             validateForm.get('zipcode').errors
